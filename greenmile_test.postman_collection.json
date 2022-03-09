@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "3d28124f-7e98-4003-9e7b-f9e652ceab92",
+		"name": "greenmile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "create_order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"latitude\":\"-3.734320\",\n    \"longitude\":\"-38.530040\",\n    \"cargo\":100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/orders",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get order by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/orders/31",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"orders",
+								"31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get route from order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/orders/15/route",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"orders",
+								"15",
+								"route"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle from order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/orders/14/vehicle",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"orders",
+								"14",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order with issues",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/orders/with-issues",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"orders",
+								"with-issues"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "route",
+			"item": [
+				{
+					"name": "create rotes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleId\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8082/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get route by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/routes/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"routes",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get statistics routes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8082/routes/statistics",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"routes",
+								"statistics"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
